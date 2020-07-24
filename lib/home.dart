@@ -26,12 +26,18 @@ class _HomeState extends State<Home> {
       body: Container(
         child: Column(
           children: <Widget>[
-            RaisedButton(onPressed: () {
-              Navigator.pushNamed(context, '/spend');
-            }),
-            RaisedButton(onPressed: () {
-              Navigator.pushNamed(context, '/deposit');
-            }),
+            RaisedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/spend');
+              },
+              child: Text("spend"),
+            ),
+            RaisedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/deposit');
+              },
+              child: Text("deposit"),
+            ),
           ],
         ),
       ),

@@ -1,4 +1,6 @@
+import 'package:cashmoneyz/spend.dart';
 import 'package:flutter/material.dart';
+import 'deposit.dart';
 import 'home.dart';
 
 void main() {
@@ -11,8 +13,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       routes: {
         '/home': (context) => Home(),
-        // '/deposit': (context) => Deposit(),
-        // '/spend': (context) => Spend(),
+        '/deposit': (context) => deposit(),
+        '/spend': (context) => spend(),
       },
       title: 'Cash Moneyz App',
       debugShowCheckedModeBanner: false,
