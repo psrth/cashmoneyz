@@ -46,57 +46,58 @@ class _spendState extends State<spend> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        key: _scaffoldKey,
-        appBar: AppBar(
-          title: Text('Deposit Money'),
-        ),
-        body: Form(
-          key: _formKey,
-          child: Container(
-              padding: EdgeInsets.symmetric(
-                vertical: 100,
-                horizontal: 30,
-              ),
-              child: Column(
-                children: <Widget>[
-                  TextFormField(
-                    controller: spendController,
-                    validator: (value) {
-                      if (value.isEmpty) {
-                        return "Enter Spend Amount";
-                      }
-                      return null;
-                    },
-                    decoration: InputDecoration(hintText: "Spend Amount"),
-                  ),
-                  TextFormField(
-                    controller: typeController,
-                    validator: (value) {
-                      if (value.isEmpty) {
-                        return "Enter Type";
-                      }
-                      return null;
-                    },
-                    decoration: InputDecoration(hintText: "Transaction Type"),
-                  ),
-                  TextFormField(
-                    controller: descriptionController,
-                    validator: (value) {
-                      if (value.isEmpty) {
-                        return "Enter Description";
-                      }
-                      return null;
-                    },
-                    decoration: InputDecoration(hintText: "Description"),
-                  ),
-                  RaisedButton(
-                    color: Colors.black,
-                    textColor: Colors.white,
-                    onPressed: _submitForm,
-                    child: Text('Update Ledger'),
-                  )
-                ],
-              )),
-        ));
+      key: _scaffoldKey,
+      appBar: AppBar(
+        title: Text('Spend Money'),
+      ),
+      body: Form(
+        key: _formKey,
+        child: Container(
+            padding: EdgeInsets.symmetric(
+              vertical: 100,
+              horizontal: 30,
+            ),
+            child: Column(
+              children: <Widget>[
+                TextFormField(
+                  controller: spendController,
+                  validator: (value) {
+                    if (value.isEmpty) {
+                      return "Enter Spend Amount";
+                    }
+                    return null;
+                  },
+                  decoration: InputDecoration(hintText: "Spend Amount"),
+                ),
+                TextFormField(
+                  controller: typeController,
+                  validator: (value) {
+                    if (value.isEmpty) {
+                      return "Enter Type";
+                    }
+                    return null;
+                  },
+                  decoration: InputDecoration(hintText: "Transaction Type"),
+                ),
+                TextFormField(
+                  controller: descriptionController,
+                  validator: (value) {
+                    if (value.isEmpty) {
+                      return "Enter Description";
+                    }
+                    return null;
+                  },
+                  decoration: InputDecoration(hintText: "Description"),
+                ),
+                RaisedButton(
+                  color: Colors.black,
+                  textColor: Colors.white,
+                  onPressed: _submitForm,
+                  child: Text('Update Ledger'),
+                )
+              ],
+            )),
+      ),
+    );
   }
 }
