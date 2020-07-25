@@ -20,7 +20,7 @@ class _HomeState extends State<Home> {
             "Cash Moneyz App",
             textAlign: TextAlign.center,
             style: TextStyle(
-              fontSize: 30,
+              fontSize: 22,
               fontWeight: FontWeight.w800,
             ),
           ),

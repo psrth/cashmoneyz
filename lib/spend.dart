@@ -38,7 +38,7 @@ class _spendState extends State<spend> {
         }
       });
 
-      _showSnackBar("Sending.");
+      _showSnackBar("Sending...");
       moneyController.submitMoney(moneyForm);
     }
   }

@@ -32,7 +32,7 @@ class _depositState extends State<deposit> {
         }
       });
 
-      _showSnackBar("Sending.");
+      _showSnackBar("Sending...");
       moneyController.submitMoney(moneyForm);
     }
   }
