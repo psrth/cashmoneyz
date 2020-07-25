@@ -90,10 +90,10 @@ class _spendState extends State<spend> {
                     decoration: InputDecoration(hintText: "Description"),
                   ),
                   RaisedButton(
-                    color: Colors.blue,
+                    color: Colors.black,
                     textColor: Colors.white,
                     onPressed: _submitForm,
-                    child: Text('Submit Feedback'),
+                    child: Text('Update Ledger'),
                   )
                 ],
               )),
