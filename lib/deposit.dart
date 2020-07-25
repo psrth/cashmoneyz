@@ -18,12 +18,6 @@ class _depositState extends State<deposit> {
   TextEditingController descriptionController = TextEditingController();
   String spendController = "";
 
-// Method to show snackbar with 'message'.
-  _showSnackBar(String message) {
-    final snackBar = SnackBar(content: Text(message));
-    _scaffoldKey.currentState.showSnackBar(snackBar);
-  }
-
   void _submitForm() {
     if (_formKey.currentState.validate()) {
       MoneyForm moneyForm = MoneyForm(typeController.text,
@@ -41,6 +35,12 @@ class _depositState extends State<deposit> {
       _showSnackBar("Sending.");
       moneyController.submitMoney(moneyForm);
     }
+  }
+
+  // Method to show snackbar with 'message'.
+  _showSnackBar(String message) {
+    final snackBar = SnackBar(content: Text(message));
+    _scaffoldKey.currentState.showSnackBar(snackBar);
   }
 
   @override
@@ -64,8 +64,8 @@ class _depositState extends State<deposit> {
                     validator: (value) {
                       if (value.isEmpty) {
                         return "Enter Deposit Amount";
-                      }
-                      return null;
+                      } else
+                        return null;
                     },
                     decoration: InputDecoration(hintText: "Deposit Amount"),
                   ),
@@ -74,8 +74,8 @@ class _depositState extends State<deposit> {
                     validator: (value) {
                       if (value.isEmpty) {
                         return "Enter Type";
-                      }
-                      return null;
+                      } else
+                        return null;
                     },
                     decoration: InputDecoration(hintText: "Transaction Type"),
                   ),
@@ -84,8 +84,8 @@ class _depositState extends State<deposit> {
                     validator: (value) {
                       if (value.isEmpty) {
                         return "Enter Description";
-                      }
-                      return null;
+                      } else
+                        return null;
                     },
                     decoration: InputDecoration(hintText: "Description"),
                   ),
