@@ -63,11 +63,11 @@ class _spendState extends State<spend> {
                   controller: spendController,
                   validator: (value) {
                     if (value.isEmpty) {
-                      return "Enter Spend Amount";
+                      return "Enter Amount Spent";
                     }
                     return null;
                   },
-                  decoration: InputDecoration(hintText: "Spend Amount"),
+                  decoration: InputDecoration(hintText: "Amount Spent"),
                 ),
                 TextFormField(
                   controller: typeController,

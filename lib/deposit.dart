@@ -67,7 +67,7 @@ class _depositState extends State<deposit> {
                       } else
                         return null;
                     },
-                    decoration: InputDecoration(hintText: "Deposit Amount"),
+                    decoration: InputDecoration(hintText: "Amount Deposited"),
                   ),
                   TextFormField(
                     controller: typeController,
