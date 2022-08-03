@@ -1,0 +1,20 @@
+function doGet(request) {
+  var sheet = SpreadsheetApp.openById("1e55CnXvGMP4lW0HyaxGdQ__iXYLzWFt4qL1jdihfJWk");
+  var result = {"status": "SUCCESS"};
+  try {
+    var type = request.parameter.type;
+    var description = request.parameter.description;
+    var deposit = request.parameter.deposit;
+    var spend = request.parameter.spend;
+    
+    var rowData = sheet.appendRow([type, description, deposit, spend]);
+  }catch(exc){
+    result = {"status": "FAILED", "message": exc};
+  }
+  
+  return ContentService
+  .createTextOutput(JSON.stringify(result))
+  .setMimeType(ContentService.MimeType.JSON);
+}
+
+
